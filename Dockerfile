@@ -12,6 +12,6 @@ FROM alpine:latest
 WORKDIR /app
 COPY --from=builder /app/webapp .
 COPY public/ ./public/
-COPY .env .env  # Optional: Include if you have a .env file
+COPY .env.example .env
 EXPOSE 8080
 CMD ["./webapp"]
